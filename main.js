@@ -3,7 +3,10 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const { connectToDatabase } = require('./database/connect');
 const apiRoutes = require('./routes/apiRoutes');
+const cors = require('cors');
 
+// Enable CORS for all routes
+app.use(cors());
 const app = express();
 
 const PORT = process.env.PORT || 3000;
