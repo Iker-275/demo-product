@@ -6,9 +6,9 @@ const apiRoutes = require('./routes/apiRoutes');
 const cors = require('cors');
 
 // Enable CORS for all routes
-app.use(cors());
-const app = express();
 
+const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json(bodyParser.urlencoded({ extended: true })));
